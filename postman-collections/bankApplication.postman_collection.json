@@ -1,0 +1,1314 @@
+{
+  "info": {
+    "_postman_id": "merged-collection-id",
+    "name": "Banka İşlemleri",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14959976"
+  },
+  "item": [
+    {
+      "name": "Hesap İşlemleri",
+      "item": [
+        {
+          "name": "checking",
+          "item": [
+            {
+              "name": "Check Hesabı  Ekleme",
+              "request": {
+                "method": "POST",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/checkingAccounts/add",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "checkingAccounts",
+                    "add"
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"bankCode\": \"BANKA_KODU\",\r\n    \"branchCode\": \"SUBE_KODU\",\r\n    \"branchName\": \"SUBE_ADI\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Tüm Check Hesabı Getir",
+              "request": {
+                "method": "GET",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/checkingAccounts/getAll",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "checkingAccounts",
+                    "getAll"
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ]
+              },
+              "response": []
+            },
+            {
+              "name": "Check Hesabı Sil",
+              "request": {
+                "method": "DELETE",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/checkingAccounts/delete/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "checkingAccounts",
+                    "delete",
+                    "1"
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ]
+              },
+              "response": []
+            },
+            {
+              "name": "Check Hesabı Arama",
+              "request": {
+                "method": "GET",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/checkingAccounts/search?info=ARAMA_BILGISI",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "checkingAccounts",
+                    "search"
+                  ],
+                  "query": [
+                    {
+                      "key": "info",
+                      "value": "ARAMA_BILGISI"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ]
+              },
+              "response": []
+            },
+            {
+              "name": "Check Hesabı Aktiviteleri",
+              "request": {
+                "method": "GET",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/checkingAccounts/activate?checkingAccountId=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "checkingAccounts",
+                    "activate"
+                  ],
+                  "query": [
+                    {
+                      "key": "checkingAccountId",
+                      "value": "1"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ]
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "saving",
+          "item": [
+            {
+              "name": "Tasarruf Hesabı Ekleme",
+              "request": {
+                "method": "POST",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/savingAccounts/add",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "savingAccounts",
+                    "add"
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"purposeSaving\": \"EDUCATION\",\r\n    \"isActive\": true,\r\n    \"maturityDate\": \"2023-12-31\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Tasarruf Hesabı Silme",
+              "request": {
+                "method": "DELETE",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/savingAccounts/delete?savingAccountId=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "savingAccounts",
+                    "delete"
+                  ],
+                  "query": [
+                    {
+                      "key": "savingAccountId",
+                      "value": "1"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ]
+              },
+              "response": []
+            },
+            {
+              "name": "Tasarruf Hesabı Geçmişini Getir",
+              "request": {
+                "method": "GET",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/savingAccounts/getActivities?savingAccountId=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "savingAccounts",
+                    "getActivities"
+                  ],
+                  "query": [
+                    {
+                      "key": "savingAccountId",
+                      "value": "1"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ]
+              },
+              "response": []
+            },
+            {
+              "name": " Tüm Tasarruf Hesaplarını Getir",
+              "request": {
+                "method": "GET",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/savingAccounts/getall",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "savingAccounts",
+                    "getall"
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ]
+              },
+              "response": []
+            },
+            {
+              "name": "Tasarruf Hesabı Para Yatırma",
+              "request": {
+                "method": "POST",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/savingAccounts/addmoney",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "savingAccounts",
+                    "addmoney"
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"savingAccountId\": 1,\r\n    \"maturity\": \"MONTHLY\",\r\n    \"amount\": 500\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Tasarruf Hesabı Aktifleştir",
+              "request": {
+                "method": "GET",
+                "url": {
+                  "raw": "http://localhost:8080/bank/accounts/savingAccounts/doactive?savingAccountId=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "accounts",
+                    "savingAccounts",
+                    "doactive"
+                  ],
+                  "query": [
+                    {
+                      "key": "savingAccountId",
+                      "value": "1"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ]
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+      {
+        "name": "Adres Oluşturma",
+        "item": [
+          {
+            "name": "Adres Oluşturma",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"country\": \"Türkiye\",\r\n    \"city\": \"Gaziantep\",\r\n    \"district\": \"Şehitkamil\",\r\n    \"streetNumber\": \"Gazikent 8004 sokak\"\r\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "http://localhost:8080/bank/address/create",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "8080",
+                "path": [
+                  "bank",
+                  "address",
+                  "create"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Adres Güncelleme",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"country\": \"Türkiye\",\r\n    \"city\": \"Ankara\",\r\n    \"district\": \"Çankaya\",\r\n    \"streetNumber\": \"Yeni Mahalle No: 456\"\r\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "http://localhost:8080/bank/address/update",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "8080",
+                "path": [
+                  "bank",
+                  "address",
+                  "update"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Adres Silme",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                }
+              ],
+              "url": {
+                "raw": "http://localhost:8080/bank/address/delete",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "8080",
+                "path": [
+                  "bank",
+                  "address",
+                  "delete"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Adres Bilgisini Getirme",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                }
+              ],
+              "url": {
+                "raw": "http://localhost:8080/bank/address/get",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "8080",
+                "path": [
+                  "bank",
+                  "address",
+                  "get"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      }
+    ]
+  ,
+    {
+      "name": "ATM İşlemleri",
+      "item": [
+        {
+          "name": "ATM İşlemi Gerçekleştir",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:8080/bank/atm/process",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "atm",
+                "process"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cardNumber\": \"XXXXXXXX\",\r\n    \"password\": \"1234\",\r\n    \"process\": \"DEPOSIT\",\r\n    \"amount\": 100\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": "İşlem Türleri: DEPOSIT, WITHDRAWAL, BALANCE_INQUIRY"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Authentication İşlemleri",
+      "item": [
+        {
+          "name": "Kullanıcı Girişi (Login)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"identity\": \"11111111111\",\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/bank/authentication/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "authentication",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Kullanıcı Çıkışı (Logout)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/bank/authentication/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "authentication",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Kart İşlemleri",
+      "item": [
+        {
+          "name": "Banka Kartı İşlemleri",
+          "item": [
+            {
+              "name": "Banka Kartı Ekleme",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"checkingAccountId\": 1,\r\n    \"password\": \"1234\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/debitCard/add",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "debitCard",
+                    "add"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Tüm Banka Kartlarını Getir",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/debitCard/getAll",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "debitCard",
+                    "getAll"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Banka Kartı Sil",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/debitCard/delete/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "debitCard",
+                    "delete",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Banka Kartı İşlem Geçmişini Getir",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/debitCard/getAllActivity?debitCardId=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "debitCard",
+                    "getAllActivity"
+                  ],
+                  "query": [
+                    {
+                      "key": "debitCardId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Kredi Kartı İşlemleri",
+          "item": [
+            {
+              "name": "Kredi Kartı Ekleme",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/creditCard/add?password=123456",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "creditCard",
+                    "add"
+                  ],
+                  "query": [
+                    {
+                      "key": "password",
+                      "value": "1234"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Kredi Kartını Aktifleştir",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/creditCard/doactive?creditCardId=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "creditCard",
+                    "doactive"
+                  ],
+                  "query": [
+                    {
+                      "key": "creditCardId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Kimlik Numarasına Göre Kredi Kartını Getir",
+              "request": {
+                "method": "GET",
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/creditCard/getIdentityNu?identityNu=11111111111",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "creditCard",
+                    "getIdentityNu"
+                  ],
+                  "query": [
+                    {
+                      "key": "identityNu",
+                      "value": "11111111111"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Kredi Kartını Sil",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/creditCard/delete/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "creditCard",
+                    "delete",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Tüm Kredi Kartlarını Getir",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/creditCard/getall",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "creditCard",
+                    "getall"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Kredi Kartından Para Çekme",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"creditCardId\": 1,\r\n    \"password\": \"123456\",\r\n    \"amount\": 100,\r\n    \"month\": 6\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/creditCard/withdrawal",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "creditCard",
+                    "withdrawal"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Kredi Kartına Para Yatırma",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"creditCardId\": 1,\r\n    \"password\": \"123456\",\r\n    \"amount\": 100\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/creditCard/deposit",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "creditCard",
+                    "deposit"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Kredi Kartı İşlem Geçmişini Getir",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer BURAYA_BEARER_TOKEN_YAZINIZ"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/bank/cards/creditCard/getAllActivity?creditCardId=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "bank",
+                    "cards",
+                    "creditCard",
+                    "getAllActivity"
+                  ],
+                  "query": [
+                    {
+                      "key": "creditCardId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Müşteri İşlemleri",
+      "item": [
+        {
+          "name": "Müşteri Oluşturma",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"identityNumber\": \"11111111111\",\r\n    \"name\": \"Yusuf\",\r\n    \"surname\": \"Akin\",\r\n    \"email\": \"ysufakn63@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"birthDay\": \"2003-04-08\",\r\n    \"telephone\": \"1111111111\",\r\n    \"income\": \"14500\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/bank/customers/sing-up",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "customers",
+                "sing-up"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Müşteri Güncelleme",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "BURAYA_BEARER_TOKEN_YAZINIZ"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"telephone\": \"0000000000\",\r\n    \"income\": \"15500\",\r\n    \"email\": \"ysufakin34@gmail.com\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/bank/customers/update",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "customers",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Müşteri AKTIFLESTIRME",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "BURAYA_BEARER_TOKEN_YAZINIZ"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/bank/customers/activate",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "customers",
+                "activate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Tüm Müşterileri Getir",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "BURAYA_BEARER_TOKEN_YAZINIZ"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/bank/customers/all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "customers",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Müşteri Getir (ID ile)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "BURAYA_BEARER_TOKEN_YAZINIZ"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/bank/customers/getById?customerId=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "customers",
+                "getById"
+              ],
+              "query": [
+                {
+                  "key": "customerId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Müşteri Arama",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "BURAYA_BEARER_TOKEN_YAZINIZ"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/bank/customers/search?customerInfo=Ahmet",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "customers",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "customerInfo",
+                  "value": "Ahmet"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Müşteri Getir (T.C. Kimlik Numarası ile)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "BURAYA_BEARER_TOKEN_YAZINIZ"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/bank/customers/getByIdentityNumber?identityNumber=11111111111",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "customers",
+                "getByIdentityNumber"
+              ],
+              "query": [
+                {
+                  "key": "identityNumber",
+                  "value": "11111111111"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }, {
+      "name": "Transfer İşlemleri",
+      "item": [
+        {
+          "name": "Iban ile para transferi",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTExMTExMSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJleHAiOjE2NTM4NTA4NTUsImlhdCI6MTY1MzgyMDg1NX0.Jqz9ynaF-HS3mU6kZPujSt2btA2iHuyd7tZwnxZQT9fgT0XuGmv9eBN5wyH9_NJGxh_zALXnhE3tSlScGQFoEA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"myIban\": \"TR3300006100522441796955166\",\r\n    \"iban\": \"TR3300006107374134529957779\",\r\n   \"nameAndSurname\": Ahmet Yılmaz,\n   \"amount\": 25,\r\n    \"description\": \"25 TRY harçlık gelmiştir. İBAN İLE\",\r\n    \"sendType\": \"OTHER\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/bank/transfer/sendMoney",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "transfer",
+                "sendMoney"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Tüm Transferleri Getir",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTExMTExMSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJleHAiOjE2NTM4NTA4NTUsImlhdCI6MTY1MzgyMDg1NX0.Jqz9ynaF-HS3mU6kZPujSt2btA2iHuyd7tZwnxZQT9fgT0XuGmv9eBN5wyH9_NJGxh_zALXnhE3tSlScGQFoEA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/bank/transfer/getAll",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "bank",
+                "transfer",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
